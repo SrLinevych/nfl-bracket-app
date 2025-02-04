@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Bowl Bet Questionnaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="page1" class="page">
+        <h1>Welcome to the Super Bowl Bet Questionnaire!</h1>
+        <p>In the next 4 pages, you'll answer some questions about your Super Bowl predictions.</p>
+        <p><b>Important:</b> At the end, take a screenshot of the summary page and share it with your friends!</p>
+        <button onclick="nextPage(2)">Start!</button>
+    </div>
+
+    <div id="page2" class="page" style="display: none;">
+        <h2><b>Who do you think will win the Super Bowl?</b></h2>
+        <label><input type="radio" name="q1" value="Chiefs"> Kansas City "Chiefs"</label><br>
+        <label><input type="radio" name="q1" value="Eagles"> Philadelphia "Eagles"</label><br>
+        <button onclick="nextPage(3)">Next</button>
+    </div>
+
+    <div id="page3" class="page" style="display: none;">
+        <h2><b>Do you think Chiefs will score more or less than 24.5 points?</b></h2>
+        <label><input type="radio" name="q2" value="Under"> Under 24.5</label><br>
+        <label><input type="radio" name="q2" value="Over"> Over 24.5</label><br>
+        <button onclick="nextPage(4)">Next</button>
+    </div>
+
+    <div id="page4" class="page" style="display: none;">
+        <h2><b>Who do you think will score the first TD?</b></h2>
+        <label><input type="radio" name="q3" value="Chiefs"> Kansas City "Chiefs"</label><br>
+        <label><input type="radio" name="q3" value="Eagles"> Philadelphia "Eagles"</label><br>
+        <button onclick="nextPage(5)">Next</button>
+    </div>
+
+    <div id="page5" class="page" style="display: none;">
+        <h2><b>Try to guess the exact final score (post OT):</b></h2>
+        <label>Kansas City "Chiefs": <input type="number" id="chiefsScore" min="0"></label><br>
+        <label>Philadelphia "Eagles": <input type="number" id="eaglesScore" min="0"></label><br>
+        <button onclick="nextPage(6)">Next</button>
+    </div>
+
+    <div id="page6" class="page" style="display: none;">
+        <h1>Your Super Bowl Predictions:</h1>
+        <div id="summary"></div>
+        <p><b>Take a screenshot of this page and share it with your friends!</b></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
